@@ -1,0 +1,45 @@
+name: SMHI run log
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # GitHub often starts scheduled runs 5-15 minutes late.
+  workflow_dispatch:
+
+permissions:
+  contents: write   # Commit the log.
+  actions: write    # Disable this workflow when the 48 hours are over.
+
+concurrency:
+  group: runlog
+  cancel-in-progress: false
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check SMHI
+        id: check
+        run: |
+          out=$(python3 runlog.py)
+          echo "$out"
+          if [ "$out" = "DONE" ]; then echo "done=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Log $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Disable after 48 hours
+        if: steps.check.outputs.done == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow disable runlog.yml --repo "$GITHUB_REPOSITORY"
