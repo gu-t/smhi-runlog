@@ -1,0 +1,4 @@
+checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs,file
+2026-11-15T18:54:58Z,uppsala,2026-11-15T18:49:28Z,2026-11-15T18:30:00Z,first,,,,runs/uppsala/2026-11-15T184928Z.json.gz
+2026-11-15T18:54:58Z,skane,2026-11-15T18:49:28Z,2026-11-15T18:30:00Z,first,,,,runs/skane/2026-11-15T184928Z.json.gz
+2026-11-15T18:54:58Z,norrbotten,2026-11-15T18:49:28Z,2026-11-15T18:30:00Z,first,,,,runs/norrbotten/2026-11-15T184928Z.json.gz
