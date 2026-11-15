@@ -1,14 +1,16 @@
 name: SMHI run log
 
+# Each run checks SMHI every 5 minutes for about 50 minutes and then starts the next run itself, so the
+# log doesn't depend on GitHub's scheduler (which never started this workflow on time). The hourly
+# schedule only restarts the chain if it breaks; the concurrency group keeps runs one at a time.
 on:
   schedule:
-    # Off the whole hour, when GitHub drops the most scheduled runs; they often start 5-15 minutes late anyway.
-    - cron: "4-59/10 * * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write   # Commit the log.
-  actions: write    # Disable this workflow when the 48 hours are over.
+  actions: write    # Start the next run, and disable this workflow when the 48 hours are over.
 
 concurrency:
   group: runlog
@@ -17,30 +19,37 @@ concurrency:
 jobs:
   log:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 70
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check SMHI
-        id: check
-        run: |
-          out=$(python3 runlog.py)
-          echo "$out"
-          if [ "$out" = "DONE" ]; then echo "done=true" >> "$GITHUB_OUTPUT"; fi
-
-      - name: Commit
+      - name: Check SMHI every 5 minutes for 50 minutes
+        id: loop
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "Log $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase
-            git push
-          fi
+          end=$(( $(date +%s) + 50 * 60 ))
+          while true; do
+            out=$(python3 runlog.py) || out="ERROR"
+            echo "$(date -u +%H:%M:%S) $out"
+            if [ "$out" = "DONE" ]; then
+              echo "done=true" >> "$GITHUB_OUTPUT"
+              gh workflow disable runlog.yml --repo "$GITHUB_REPOSITORY"
+              exit 0
+            fi
+            git add -A
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Log $(date -u +%Y-%m-%dT%H:%MZ)"
+              git pull -q --rebase && git push -q || echo "push failed"
+            fi
+            if [ $(( $(date +%s) + 300 )) -gt "$end" ]; then break; fi
+            sleep 300
+          done
 
-      - name: Disable after 48 hours
-        if: steps.check.outputs.done == 'true'
+      - name: Start the next run
+        if: always() && steps.loop.outputs.done != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow disable runlog.yml --repo "$GITHUB_REPOSITORY"
+        run: gh workflow run runlog.yml --repo "$GITHUB_REPOSITORY" --ref main

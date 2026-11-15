@@ -1,5 +1,5 @@
 # Logs how often SMHI's SNOW1g point forecast gets a new createdTime, and whether the contents
-# actually change. Run every ~10 minutes by .github/workflows/runlog.yml, for 48 hours.
+# actually change. Run every ~5 minutes by .github/workflows/runlog.yml, for 48 hours.
 #
 # Files:
 #   checks.csv  - every check: when, and the createdTime/referenceTime SMHI reported.
