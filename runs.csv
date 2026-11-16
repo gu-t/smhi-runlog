@@ -209,3 +209,6 @@ checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs
 2026-11-16T13:35:11Z,uppsala,2026-11-16T13:30:43Z,2026-11-16T13:15:00Z,changed,4,83,"{""precipitation_amount_mean"": 0.3, ""symbol_code"": 1}",runs/uppsala/2026-11-16T133043Z.json.gz
 2026-11-16T13:35:11Z,skane,2026-11-16T13:30:43Z,2026-11-16T13:15:00Z,changed,3,83,"{""precipitation_amount_mean"": 0.1, ""probability_of_precipitation"": 60, ""symbol_code"": 12}",runs/skane/2026-11-16T133043Z.json.gz
 2026-11-16T13:35:11Z,norrbotten,2026-11-16T13:30:43Z,2026-11-16T13:15:00Z,identical,0,83,,
+2026-11-16T13:50:18Z,uppsala,2026-11-16T13:45:39Z,2026-11-16T13:30:00Z,changed,3,83,"{""precipitation_amount_mean"": 0.4, ""symbol_code"": 1}",runs/uppsala/2026-11-16T134539Z.json.gz
+2026-11-16T13:50:18Z,skane,2026-11-16T13:45:39Z,2026-11-16T13:30:00Z,changed,3,83,"{""precipitation_amount_mean"": 0.2, ""probability_of_precipitation"": 60, ""symbol_code"": 12}",runs/skane/2026-11-16T134539Z.json.gz
+2026-11-16T13:50:18Z,norrbotten,2026-11-16T13:45:39Z,2026-11-16T13:30:00Z,identical,0,83,,
