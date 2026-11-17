@@ -500,3 +500,6 @@ checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs
 2026-11-17T13:49:07Z,uppsala,2026-11-17T13:45:50Z,2026-11-17T13:30:00Z,identical,0,83,,
 2026-11-17T13:49:07Z,skane,2026-11-17T13:45:50Z,2026-11-17T13:30:00Z,changed,2,83,"{""cloud_area_fraction"": 1, ""symbol_code"": 2}",runs/skane/2026-11-17T134550Z.json.gz
 2026-11-17T13:49:07Z,norrbotten,2026-11-17T13:45:50Z,2026-11-17T13:30:00Z,changed,2,83,"{""cloud_area_fraction"": 1, ""symbol_code"": 2}",runs/norrbotten/2026-11-17T134550Z.json.gz
+2026-11-17T14:04:30Z,uppsala,2026-11-17T14:00:22Z,2026-11-17T13:45:00Z,changed,21,83,,runs/uppsala/2026-11-17T140022Z.json.gz
+2026-11-17T14:04:30Z,skane,2026-11-17T14:00:22Z,2026-11-17T13:45:00Z,changed,27,83,"{""cloud_area_fraction"": 1, ""symbol_code"": 2}",runs/skane/2026-11-17T140022Z.json.gz
+2026-11-17T14:04:30Z,norrbotten,2026-11-17T14:00:22Z,2026-11-17T13:45:00Z,changed,27,83,"{""symbol_code"": 2}",runs/norrbotten/2026-11-17T140022Z.json.gz
