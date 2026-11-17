@@ -518,3 +518,6 @@ checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs
 2026-11-17T15:20:19Z,uppsala,2026-11-17T15:15:24Z,2026-11-17T15:00:00Z,changed,13,81,"{""air_temperature"": 0.7, ""cloud_area_fraction"": 3, ""probability_of_precipitation"": 4, ""symbol_code"": 5, ""visibility_in_air"": 47.3, ""wind_speed"": 2.8, ""wind_speed_of_gust"": 4.8}",runs/uppsala/2026-11-17T151524Z.json.gz
 2026-11-17T15:20:19Z,skane,2026-11-17T15:15:24Z,2026-11-17T15:00:00Z,changed,10,81,"{""air_temperature"": 0.2, ""probability_of_precipitation"": 3, ""symbol_code"": 2, ""visibility_in_air"": 35.6, ""wind_speed"": 2.6, ""wind_speed_of_gust"": 3.8}",runs/skane/2026-11-17T151524Z.json.gz
 2026-11-17T15:20:19Z,norrbotten,2026-11-17T15:15:24Z,2026-11-17T15:00:00Z,changed,16,81,"{""air_temperature"": 0.2, ""visibility_in_air"": 0.2, ""wind_speed"": 0.8, ""wind_speed_of_gust"": 1.2}",runs/norrbotten/2026-11-17T151524Z.json.gz
+2026-11-17T15:35:38Z,uppsala,2026-11-17T15:28:54Z,2026-11-17T15:15:00Z,identical,0,81,,
+2026-11-17T15:35:38Z,skane,2026-11-17T15:28:54Z,2026-11-17T15:15:00Z,changed,1,81,"{""symbol_code"": 2}",runs/skane/2026-11-17T152854Z.json.gz
+2026-11-17T15:35:38Z,norrbotten,2026-11-17T15:28:54Z,2026-11-17T15:15:00Z,identical,0,81,,
