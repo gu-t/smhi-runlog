@@ -461,3 +461,6 @@ checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs
 2026-11-17T10:36:47Z,uppsala,2026-11-17T10:32:35Z,2026-11-17T10:15:00Z,identical,0,85,,
 2026-11-17T10:36:47Z,skane,2026-11-17T10:32:35Z,2026-11-17T10:15:00Z,identical,0,85,,
 2026-11-17T10:36:47Z,norrbotten,2026-11-17T10:32:35Z,2026-11-17T10:15:00Z,changed,4,85,"{""cloud_area_fraction"": 3, ""symbol_code"": 1}",runs/norrbotten/2026-11-17T103235Z.json.gz
+2026-11-17T10:52:04Z,uppsala,2026-11-17T10:47:51Z,2026-11-17T10:30:00Z,identical,0,85,,
+2026-11-17T10:52:04Z,skane,2026-11-17T10:47:51Z,2026-11-17T10:30:00Z,identical,0,85,,
+2026-11-17T10:52:04Z,norrbotten,2026-11-17T10:47:51Z,2026-11-17T10:30:00Z,changed,4,85,"{""cloud_area_fraction"": 8, ""symbol_code"": 5}",runs/norrbotten/2026-11-17T104751Z.json.gz
