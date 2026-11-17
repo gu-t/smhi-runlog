@@ -533,3 +533,6 @@ checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs
 2026-11-17T16:36:22Z,uppsala,2026-11-17T16:30:10Z,2026-11-17T16:15:00Z,identical,0,80,,
 2026-11-17T16:36:22Z,skane,2026-11-17T16:30:10Z,2026-11-17T16:15:00Z,identical,0,80,,
 2026-11-17T16:36:22Z,norrbotten,2026-11-17T16:30:10Z,2026-11-17T16:15:00Z,identical,0,80,,
+2026-11-17T16:46:26Z,uppsala,2026-11-17T16:43:56Z,2026-11-17T16:30:00Z,changed,58,80,"{""air_temperature"": 2.7, ""cloud_area_fraction"": 8, ""symbol_code"": 5}",runs/uppsala/2026-11-17T164356Z.json.gz
+2026-11-17T16:46:26Z,skane,2026-11-17T16:43:56Z,2026-11-17T16:30:00Z,changed,58,80,"{""air_temperature"": 1.4, ""cloud_area_fraction"": 8, ""probability_of_precipitation"": 3, ""symbol_code"": 10}",runs/skane/2026-11-17T164356Z.json.gz
+2026-11-17T16:46:26Z,norrbotten,2026-11-17T16:43:56Z,2026-11-17T16:30:00Z,changed,58,80,"{""air_temperature"": 1.9, ""cloud_area_fraction"": 3, ""symbol_code"": 1}",runs/norrbotten/2026-11-17T164356Z.json.gz
