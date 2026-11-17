@@ -347,3 +347,6 @@ checked,point,createdTime,referenceTime,status,changedSteps,commonSteps,maxDiffs
 2026-11-17T01:09:38Z,uppsala,2026-11-17T01:03:23Z,2026-11-17T00:45:00Z,changed,45,83,"{""air_temperature"": 0.4, ""precipitation_amount_mean"": 0.1, ""probability_of_precipitation"": 27}",runs/uppsala/2026-11-17T010323Z.json.gz
 2026-11-17T01:09:38Z,skane,2026-11-17T01:03:23Z,2026-11-17T00:45:00Z,changed,27,83,"{""air_temperature"": 0.1, ""precipitation_amount_mean"": 0.1, ""probability_of_precipitation"": 7, ""symbol_code"": 12}",runs/skane/2026-11-17T010323Z.json.gz
 2026-11-17T01:09:38Z,norrbotten,2026-11-17T01:03:23Z,2026-11-17T00:45:00Z,changed,43,83,"{""air_temperature"": 0.7}",runs/norrbotten/2026-11-17T010323Z.json.gz
+2026-11-17T01:24:45Z,uppsala,2026-11-17T01:18:36Z,2026-11-17T01:00:00Z,changed,18,82,"{""air_temperature"": 0.2, ""precipitation_amount_mean"": 0.1, ""probability_of_precipitation"": 60, ""symbol_code"": 12}",runs/uppsala/2026-11-17T011836Z.json.gz
+2026-11-17T01:24:45Z,skane,2026-11-17T01:18:36Z,2026-11-17T01:00:00Z,changed,15,82,"{""air_temperature"": 0.1, ""precipitation_amount_mean"": 0.1, ""probability_of_precipitation"": 57, ""symbol_code"": 12}",runs/skane/2026-11-17T011836Z.json.gz
+2026-11-17T01:24:45Z,norrbotten,2026-11-17T01:18:36Z,2026-11-17T01:00:00Z,changed,3,82,"{""air_temperature"": 0.2}",runs/norrbotten/2026-11-17T011836Z.json.gz
